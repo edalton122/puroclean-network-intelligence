@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Salesforce Account Team | PuroClean</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif; min-height: 100vh;
+      background: linear-gradient(160deg, #FFE8D6 0%, #FFF0E8 50%, #FFF5EE 100%);
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; padding: 40px 20px; position: relative; overflow-x: hidden;
+    }
+    .cloud { position: fixed; border-radius: 50%; background: white; opacity: 0.45; filter: blur(2px); pointer-events: none; }
+    .c1 { width: 340px; height: 140px; top: 5%; left: -60px; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; }
+    .c2 { width: 220px; height: 100px; top: 2%; left: 14%; }
+    .c3 { width: 280px; height: 120px; top: 8%; right: -20px; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; }
+    .c4 { width: 180px; height: 80px; top: 4%; right: 18%; }
+    .c5 { width: 200px; height: 90px; bottom: 8%; left: 5%; }
+    .c6 { width: 260px; height: 110px; bottom: 4%; right: 8%; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; }
+    .card { background: white; border-radius: 28px; padding: 52px 48px 48px; max-width: 940px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.10); position: relative; z-index: 2; }
+    .header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
+    .header-left h1 { font-size: 2.4rem; font-weight: 900; color: #00346D; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 6px; }
+    .header-left p { font-size: 0.95rem; color: #FF6900; font-weight: 600; }
+    .logos { display: flex; align-items: center; gap: 14px; }
+    .logos img { height: 36px; }
+    .logo-divider { width: 1px; height: 32px; background: #E5E7EB; }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 36px; }
+    @media (max-width: 720px) { .team-grid { grid-template-columns: 1fr; } }
+    .person-card { border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .avatar-wrap { width: 100%; height: 200px; overflow: hidden; position: relative; }
+    .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+    .avatar-initial { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem; font-weight: 900; color: white; }
+    .person-info { padding: 20px 22px; background: white; }
+    .person-info h3 { font-size: 1.05rem; font-weight: 800; color: #00346D; margin-bottom: 4px; }
+    .person-info .role { font-size: 11px; font-weight: 700; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 12px; }
+    .email-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #FF6900; text-decoration: none; border: 1.5px solid #FDDAB0; padding: 7px 14px; border-radius: 8px; transition: all 0.2s; }
+    .email-btn:hover { background: #FF6900; color: white; border-color: #FF6900; }
+    .footer-note { text-align: center; color: #6B7280; font-size: 0.9rem; line-height: 1.7; max-width: 500px; margin: 0 auto 20px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #FF6900; text-decoration: none; border: 1.5px solid #FDDAB0; padding: 8px 16px; border-radius: 8px; transition: all 0.2s; }
+    .back-link:hover { background: #FF6900; color: white; }
+  </style>
+</head>
+<body>
+  <div class="cloud c1"></div><div class="cloud c2"></div>
+  <div class="cloud c3"></div><div class="cloud c4"></div>
+  <div class="cloud c5"></div><div class="cloud c6"></div>
+
+  <div class="card">
+    <div class="header">
+      <div class="header-left">
+        <h1>Your Salesforce Account Team</h1>
+        <p>Dedicated to PuroClean Corporate</p>
+      </div>
+      <div class="logos">
+        <img src="https://www.puroclean.com/wp-content/themes/puroclean-tw/assets/img/puroclean-logo.svg" alt="PuroClean" onerror="this.style.display='none'"/>
+        <div class="logo-divider"></div>
+        <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2024/11/logo-salesforce.svg" alt="Salesforce"/>
+      </div>
+    </div>
+
+    <div class="team-grid">
+
+      <!-- AE: Corey LaDow -->
+      <div class="person-card">
+        <div class="avatar-wrap" style="background:linear-gradient(135deg,#FF6900,#FF8C40);">
+          <img src="photo-ae.png" alt="Corey LaDow" onerror="this.outerHTML='<div class=\'avatar-initial\' style=\'background:linear-gradient(135deg,#FF6900,#FF8C40)\'>C</div>'"/>
+        </div>
+        <div class="person-info">
+          <h3>Corey LaDow</h3>
+          <div class="role">Account Executive</div>
+          <a href="mailto:cladow@salesforce.com" class="email-btn">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l9 5 9-5M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            cladow@salesforce.com
+          </a>
+        </div>
+      </div>
+
+      <!-- SE: Eric Dalton -->
+      <div class="person-card">
+        <div class="avatar-wrap" style="background:linear-gradient(135deg,#72BF44,#4A9A1E);">
+          <img src="photo-se.jpg" alt="Eric Dalton" style="object-position:center 15%;" onerror="this.outerHTML='<div class=\'avatar-initial\' style=\'background:linear-gradient(135deg,#72BF44,#4A9A1E)\'>E</div>'"/>
+        </div>
+        <div class="person-info">
+          <h3>Eric Dalton</h3>
+          <div class="role">Solutions Engineer</div>
+          <a href="mailto:edalton@salesforce.com" class="email-btn">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l9 5 9-5M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            edalton@salesforce.com
+          </a>
+        </div>
+      </div>
+
+      <!-- RVP: Grant Stephens -->
+      <div class="person-card">
+        <div class="avatar-wrap" style="background:linear-gradient(135deg,#C50A1D,#E83355);">
+          <img src="photo-rvp.png" alt="Grant Stephens" onerror="this.outerHTML='<div class=\'avatar-initial\' style=\'background:linear-gradient(135deg,#C50A1D,#E83355)\'>G</div>'"/>
+        </div>
+        <div class="person-info">
+          <h3>Grant Stephens</h3>
+          <div class="role">Regional Vice President</div>
+          <a href="mailto:gstephens@salesforce.com" class="email-btn">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l9 5 9-5M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            gstephens@salesforce.com
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-note">
+      Ready to explore how Salesforce can unify PuroClean's franchise network intelligence? Reach out to any member of the team — we'll get the right conversation on the calendar.
+    </div>
+    <div style="text-align:center;">
+      <a href="index.html" class="back-link">← Back to Deck</a>
+    </div>
+  </div>
+</body>
+</html>

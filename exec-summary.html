@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Executive Summary | PuroClean × Salesforce</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #F7F4F2; color: #1E293B; }
+    .print-bar { display: flex; align-items: center; justify-content: space-between; padding: 12px 32px; background: white; border-bottom: 1px solid #E5E7EB; position: sticky; top: 0; z-index: 100; }
+    .print-bar span { font-size: 13px; font-weight: 700; color: #00346D; }
+    .print-bar a { font-size: 12px; color: #FF6900; text-decoration: none; font-weight: 700; margin-right: 16px; }
+    .print-bar button { background: #FF6900; color: white; border: none; padding: 8px 18px; border-radius: 8px; font-size: 12px; font-weight: 800; cursor: pointer; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 32px 24px; }
+    .hero { background: linear-gradient(135deg, #00346D 0%, #0D5FAD 100%); border-radius: 20px; padding: 48px 40px; margin-bottom: 24px; color: white; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,105,0,0.08) 1px, transparent 1px); background-size: 32px 32px; }
+    .hero-logos { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; position: relative; }
+    .hero-logos img { height: 32px; filter: brightness(0) invert(1); opacity: 0.9; }
+    .hero-logos .div { width: 1px; height: 26px; background: rgba(255,255,255,0.25); }
+    .hero h1 { font-size: 2rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 10px; position: relative; }
+    .hero p { font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.7; max-width: 560px; margin-bottom: 20px; position: relative; }
+    .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; position: relative; }
+    .hero-pill { font-size: 10px; font-weight: 700; padding: 4px 12px; border-radius: 99px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.85); letter-spacing: 0.04em; text-transform: uppercase; }
+    .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+    @media (max-width: 640px) { .stats-strip { grid-template-columns: 1fr 1fr; } }
+    .stat-box { background: white; border-radius: 14px; padding: 18px 16px; text-align: center; border: 1px solid #E5E7EB; }
+    .stat-box .val { font-size: 1.8rem; font-weight: 900; color: #FF6900; letter-spacing: -0.03em; line-height: 1; }
+    .stat-box .lbl { font-size: 10px; font-weight: 700; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 6px; line-height: 1.4; }
+    .section { background: white; border-radius: 16px; padding: 28px 28px; margin-bottom: 20px; border: 1px solid #E5E7EB; }
+    .section h2 { font-size: 1rem; font-weight: 800; color: #00346D; margin-bottom: 12px; }
+    .section p { font-size: 0.88rem; color: #374151; line-height: 1.75; }
+    .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+    @media (max-width: 640px) { .pillars { grid-template-columns: 1fr; } }
+    .pillar { background: white; border-radius: 16px; padding: 22px 20px; border: 1px solid #E5E7EB; }
+    .pillar-badge { font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 9px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
+    .pillar h3 { font-size: 0.9rem; font-weight: 800; color: #00346D; margin-bottom: 8px; }
+    .pillar ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+    .pillar ul li { font-size: 0.8rem; color: #6B7280; line-height: 1.55; padding-left: 12px; position: relative; }
+    .pillar ul li::before { content: '→'; position: absolute; left: 0; color: #FF6900; font-weight: 900; font-size: 10px; }
+    .pillar .metric { font-size: 10px; font-weight: 700; color: white; padding: 5px 10px; border-radius: 6px; display: inline-block; margin-top: 10px; }
+    .timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+    @media (max-width: 640px) { .timeline { grid-template-columns: 1fr; } }
+    .phase { background: white; border-radius: 14px; padding: 18px 16px; border: 1px solid #E5E7EB; border-top: 3px solid #FF6900; }
+    .phase .num { font-size: 10px; font-weight: 800; color: #FF6900; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+    .phase h4 { font-size: 0.88rem; font-weight: 800; color: #00346D; margin-bottom: 6px; }
+    .phase .date { font-size: 10px; font-weight: 700; color: #9CA3AF; margin-bottom: 8px; }
+    .phase p { font-size: 0.78rem; color: #6B7280; line-height: 1.6; }
+    .cta-box { background: linear-gradient(135deg, #00346D, #0D5FAD); border-radius: 16px; padding: 32px; text-align: center; margin-bottom: 20px; }
+    .cta-box h3 { font-size: 1.1rem; font-weight: 800; color: white; margin-bottom: 8px; }
+    .cta-box p { font-size: 0.88rem; color: rgba(255,255,255,0.7); margin-bottom: 18px; }
+    .cta-box a { display: inline-block; background: #FF6900; color: white; text-decoration: none; padding: 12px 28px; border-radius: 10px; font-size: 13px; font-weight: 800; }
+    .legal { font-size: 10px; color: #9CA3AF; line-height: 1.7; text-align: center; padding: 16px; }
+    @media print { .print-bar { display: none; } body { background: white; } }
+  </style>
+</head>
+<body>
+
+<div class="print-bar">
+  <span>PuroClean × Salesforce — Executive Summary</span>
+  <div>
+    <a href="index.html">← Back to Full Deck</a>
+    <button onclick="window.print()">Print / Save PDF</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-logos">
+      <img src="https://www.puroclean.com/wp-content/themes/puroclean-tw/assets/img/puroclean-logo.svg" alt="PuroClean" onerror="this.style.display='none'"/>
+      <div class="div"></div>
+      <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2024/11/logo-salesforce.svg" alt="Salesforce"/>
+    </div>
+    <h1>The Franchise Network Intelligence Platform</h1>
+    <p>A strategic Salesforce platform proposal for PuroClean Corporate — transforming 500+ independently operating franchises into one governed intelligence network with complete visibility from corporate to crew.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">Prepared September 2026</span>
+      <span class="hero-pill">Confidential</span>
+      <span class="hero-pill">PuroClean Corporate</span>
+      <span class="hero-pill">Q4 2026 Technical Review</span>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-strip">
+    <div class="stat-box"><div class="val">20%</div><div class="lbl">Network Data Visible to Corporate Today</div></div>
+    <div class="stat-box"><div class="val">500+</div><div class="lbl">Franchise Locations Across 50+ States</div></div>
+    <div class="stat-box"><div class="val">41%</div><div class="lbl">Estimate Close Rate at One $22M Franchise</div></div>
+    <div class="stat-box"><div class="val">Dec '26</div><div class="lbl">CJ Bailey's Phase 1 Go-Live Goal</div></div>
+  </div>
+
+  <!-- Situation -->
+  <div class="section">
+    <h2>Where PuroClean Is Today</h2>
+    <p>PuroClean has built a 25-year operational foundation — 500+ franchise locations, 24/7 emergency response, preferred provider for 3 of the top 5 national insurance carriers. The franchise model that made PuroClean great is also where the opportunity lives. Each of those 500 locations runs its own tech stack, tracks its own jobs, and manages its own customer relationships. Corporate can see about 20% of what's happening across the network. The other 80% operates in the dark.</p>
+    <p style="margin-top:10px;">Salesforce proposes a three-phase platform addressing all four gaps simultaneously — replacing fragile custom integrations with a governed API layer, giving the BizDev team a proper CRM, and unlocking real-time executive intelligence through Tableau. This is not a rip-and-replace. PuroClean's existing data lake, SPAR vendor model, and franchise autonomy all remain intact. Salesforce adds the intelligence layer on top.</p>
+  </div>
+
+  <!-- Pillars -->
+  <div class="pillars">
+
+    <div class="pillar">
+      <span class="pillar-badge" style="background:#FFF5EE;color:#FF6900;">Pillar 1 — Data Foundation</span>
+      <h3>Franchise Data Blindspot Eliminated</h3>
+      <ul>
+        <li>SPAR API standard feeds all job management systems into the data lake</li>
+        <li>Mulesoft Anypoint governs every integration — 350+ pre-built connectors</li>
+        <li>Nick's custom code retired; bus-factor risk eliminated</li>
+      </ul>
+      <span class="metric" style="background:#FF6900;">Target: 90% Network Coverage</span>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-badge" style="background:#EFF6FF;color:#2491EB;">Pillar 2 — Sales Cloud</span>
+      <h3>Franchise Funnel Leakage Fixed</h3>
+      <ul>
+        <li>10 seats for BizDev (8) + SPAR program (2) — Elizabeth wants to start now</li>
+        <li>Every estimate becomes a tracked Sales Cloud Opportunity with SLA follow-up</li>
+        <li>ATI Restoration proves full restoration operations run on Salesforce</li>
+      </ul>
+      <span class="metric" style="background:#2491EB;">41% → 51%+ Close Rate Target</span>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-badge" style="background:#FFFBEB;color:#D97706;">Pillar 3 — Tableau</span>
+      <h3>Executive & RD Intelligence Live</h3>
+      <ul>
+        <li>Phase 1: CJ and Mark Davis see full network job volumes and compliance rates</li>
+        <li>Phase 2: Every RD sees their region's performance scorecard live</li>
+        <li>Phase 3: Franchise profitability coaching powered by QuickBooks + Tableau</li>
+      </ul>
+      <span class="metric" style="background:#D97706;">From 0% to Real-Time Visibility</span>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-badge" style="background:#FEF3C7;color:#92400E;">Pillar 4 — Agentforce</span>
+      <h3>Proactive Revenue Intelligence</h3>
+      <ul>
+        <li>Weather event overlay on historical job data identifies outreach opportunities</li>
+        <li>Agentforce triggers automated franchise text outreach during storm events</li>
+        <li>Historical addresses served + new weather event = proactive revenue pipeline</li>
+      </ul>
+      <span class="metric" style="background:#92400E;">$0 Storm Revenue Today → Captured</span>
+    </div>
+
+  </div>
+
+  <!-- Industry Context -->
+  <div class="section">
+    <h2>Industry Context — Why Now</h2>
+    <p><strong style="color:#00346D;">CJ Bailey is pioneering this</strong> — no restoration franchise group has built an open-vendor network intelligence platform before. Three other large franchise restoration groups are watching PuroClean's implementation. If it works, the SPAR model becomes the industry standard. ATI Restoration already runs their full operation on Salesforce (CRM + Field Service + Xactimate) — proving the stack works at scale. Signal Restoration (also owned by Mark Davis) is already a Salesforce CRM customer. The path is walked by companies PuroClean already knows.</p>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <div class="phase">
+      <div class="num">Phase 1</div>
+      <h4>Data Foundation &amp; Sales Cloud</h4>
+      <div class="date">Now → December 2026</div>
+      <p>Mulesoft feeds from Dash + PSA live. Sales Cloud for 10 corporate users. Tableau Phase 1 exec dashboard. 90% network data coverage target.</p>
+    </div>
+    <div class="phase">
+      <div class="num">Phase 2</div>
+      <h4>Network Intelligence</h4>
+      <div class="date">Q1 2027</div>
+      <p>Add Albi + QuickBooks integrations. RD regional scorecards live. Franchise close-rate tracking. Field Service joins SPAR vendor list.</p>
+    </div>
+    <div class="phase">
+      <div class="num">Phase 3</div>
+      <h4>Full Franchise Intelligence</h4>
+      <div class="date">Q2–Q3 2027</div>
+      <p>Full profitability view. FranConnect integrated. Agentforce storm outreach live. Franchise coaching scorecards powered by real data.</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h3>Ready to Schedule the Q4 2026 Technical Review?</h3>
+    <p>Confirm the Mulesoft + Data Lake architecture and scope the Sales Cloud deployment with the BizDev team. CJ's stated goal: December 2026 go-live.</p>
+    <a href="team.html">Contact Your Salesforce Team →</a>
+  </div>
+
+  <!-- Legal -->
+  <div class="legal">
+    This document is prepared exclusively for PuroClean Corporate Leadership.<br/>
+    All projections are estimates based on industry benchmarks and call transcript data. Not a formal commitment.<br/>
+    Salesforce, Agentforce, Mulesoft, Tableau, and Data Cloud are registered trademarks of Salesforce, Inc.<br/>
+    © 2026 Salesforce, Inc. All rights reserved.
+  </div>
+
+</div>
+</body>
+</html>
